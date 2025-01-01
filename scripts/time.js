@@ -45,12 +45,12 @@ function update() {
         happyNewYear.style.color = "black";
     }
 
-    daysUntil.textContent = untilNewYear(now, 0);
+    daysUntil.textContent = untilNewYear(now, 0) - 1;
     hoursUntil.textContent = untilNewYear(now, 1) % 24;
     minutesUntil.textContent = untilNewYear(now, 2) % 60;
     secondsUntil.textContent = untilNewYear(now, 3) % 60;
 
-    if (untilNewYear(now, 0) == 7 && untilNewYear(now, 1) % 24 == 6 && untilNewYear(now, 2) % 60 == 0) {
+    if (untilNewYear(now, 0) - 1 == 0 && untilNewYear(now, 1) % 24 == 0 && untilNewYear(now, 2) % 60 == 0) {
         curTime.style.display = "none";
         happyNewYear.style.display = "block";
         happyNewYear.style.fontSize = "75px";
